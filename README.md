@@ -1,199 +1,140 @@
-#### FastHub is currently under a huge refactoring, please make sure to submit an issue only if necessary. 
-##### You could follow the development on V5 in this [PR](https://github.com/k0shk0sh/FastHub/pull/2599)
+<div align="center" markdown="1">
 
-[![Build Status](https://app.bitrise.io/app/abd1afbd2a03e0e4/status.svg?token=txykViMUFzx1WkvjixD01A&branch=development)](https://app.bitrise.io/app/abd1afbd2a03e0e4)
-[![Releases](https://img.shields.io/github/release/k0shk0sh/FastHub.svg)](https://github.com/k0shk0sh/FastHub/releases/latest) [![Slack](https://img.shields.io/badge/slack-join-e01563.svg)](http://rebrand.ly/fasthub)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Version: 2.3](https://img.shields.io/badge/Version%3F-2.3-green.svg)](https://github.com/ASHWIN990/ADB-Toolkit)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/ASHWIN990/ADB-Toolkit/graphs/commit-activity)
+[![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat.svg)](https://inventory.raw.pm/tools.html#ADB-Toolkit)
+[![made-with-bash](https://img.shields.io/badge/-Made%20with%20Bash-1f425f.svg?logo=image%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE3MDg2QTAyQUZCMzExRTVBMkQxRDMzMkJDMUQ4RDk3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE3MDg2QTAzQUZCMzExRTVBMkQxRDMzMkJDMUQ4RDk3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTcwODZBMDBBRkIzMTFFNUEyRDFEMzMyQkMxRDhEOTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTcwODZBMDFBRkIzMTFFNUEyRDFEMzMyQkMxRDhEOTciLz4gPC9yZGY6RGVzY3JpcHRpb24%2BIDwvcmRmOlJERj4gPC94OnhtcG1ldGE%2BIDw%2FeHBhY2tldCBlbmQ9InIiPz6lm45hAAADkklEQVR42qyVa0yTVxzGn7d9Wy03MS2ii8s%2BeokYNQSVhCzOjXZOFNF4jx%2BMRmPUMEUEqVG36jo2thizLSQSMd4N8ZoQ8RKjJtooaCpK6ZoCtRXKpRempbTv5ey83bhkAUphz8fznvP8znn%2B%2F3NeEEJgNBoRRSmz0ub%2FfuxEacBg%2FDmYtiCjgo5NG2mBXq%2BH5I1ogMRk9Zbd%2BQU2e1ML6VPLOyf5tvBQ8yT1lG10imxsABm7SLs898GTpyYynEzP60hO3trHDKvMigUwdeaceacqzp7nOI4n0SSIIjl36ao4Z356OV07fSQAk6xJ3XGg%2BLCr1d1OYlVHp4eUHPnerU79ZA%2F1kuv1JQMAg%2BE4O2P23EumF3VkvHprsZKMzKwbRUXFEyTvSIEmTVbrysp%2BWr8wfQHGK6WChVa3bKUmdWou%2BjpArdGkzZ41c1zG%2Fu5uGH4swzd561F%2BuhIT4%2BLnSuPsv9%2BJKIpjNr9dXYOyk7%2FBZrcjIT4eCnoKgedJP4BEqhG77E3NKP31FO7cfQA5K0dSYuLgz2TwCWJSOBzG6crzKK%2BohNfni%2Bx6OMUMMNe%2Fgf7ocbw0v0acKg6J8Ql0q%2BT%2FAXR5PNi5dz9c71upuQqCKFAD%2BYhrZLEAmpodaHO3Qy6TI3NhBpbrshGtOWKOSMYwYGQM8nJzoFJNxP2HjyIQho4PewK6hBktoDcUwtIln4PjOWzflQ%2Be5yl0yCCYgYikTclGlxadio%2BBQCSiW1UXoVGrKYwH4RgMrjU1HAB4vR6LzWYfFUCKxfS8Ftk5qxHoCUQAUkRJaSEokkV6Y%2F%2BJUOC4hn6A39NVXVBYeNP8piH6HeA4fPbpdBQV5KOx0QaL1YppX3Jgk0TwH2Vg6S3u%2BdB91%2B%2FpuNYPYFl5uP5V7ZqvsrX7jxqMXR6ff3gCQSTzFI0a1TX3wIs8ul%2Bq4HuWAAiM39vhOuR1O1fQ2gT%2F26Z8Z5vrl2OHi9OXZn995nLV9aFfS6UC9JeJPfuK0NBohWpCHMSAAsFe74WWP%2BvT25wtP9Bpob6uGqqyDnOtaeumjRu%2ByFu36VntK%2FPA5umTJeUtPWZSU9BCgud661odVp3DZtkc7AnYR33RRC708PrVi1larW7XwZIjLnd7R6SgSqWSNjU1B3F72pz5TZbXmX5vV81Yb7Lg7XT%2FUXriu8XLVqw6c6XqWnBKiiYU%2BMt3wWF7u7i91XlSEITwSAZ%2FCzAAHsJVbwXYFFEAAAAASUVORK5CYII%3D)](https://www.gnu.org/software/bash/)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FASHWIN990%2FADB-Toolkit&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://ashwini.codes)
 
 
-![Logo](/.github/assets/feature_graphic.png?raw=true "Logo")
+</div>
 
-# FastHub  
 
-Yet another **open-source** GitHub client app but unlike any other app, FastHub was built from scratch.  
-<!--
-[<img src="https://f-droid.org/badge/get-it-on.png"
-      alt="Get it on F-Droid"
-      height="80">](https://f-droid.org/repository/browse/?fdid=com.fastaccess.github)
--->
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-      alt="Download from Google Play"
-      height="80">](https://play.google.com/store/apps/details?id=com.fastaccess.github)
-[<img src=".github/assets/direct-apk-download.png"
-      alt="Direct apk download"
-      height="80">](https://github.com/k0shk0sh/FastHub/releases/latest)
+<p align="center">
+  <a href="https://github.com/ASHWIN990/ADB-Toolkit">
+    <!--<img align="center" src="screenshots/logo.png" width="780" height="80"><br>-->
+    <img align="center" src="https://raw.githubusercontent.com/ASHWIN990/ADB-Toolkit/master/screenshots/ADB-Toolkit-Banner.png" alt="ADB-Toolkit-Banner" border="0" height="320px" width="640"></a><br>
+  </a>
+  <a href="https://github.com/ASHWIN990/ADB-Toolkit">
+   <h1 align="center">ADB-Toolkit V2.3</h1>
+  </a>
+  <h4 align="center"><b>
+  Tool for testing your Android device and HaHaHack someone Android Phone ( Don't use with wrong intentions ) 🤘🤘 
+  </b></h4>
+  </p>
 
-## Features  
-- **App**
-  - Three login types (Basic Auth), (Access Token) or via (OAuth)
-  - Multiple Accounts
-  - Enterprise Accounts
-  - Themes mode
-  - Offline-mode
-  - Markdown and code highlighting support
-  - Notifications overview and "Mark all as read"
-  - Search Users/Orgs, Repos, Issues/PRs & Code.
-  - FastHub & GitHub Pinned Repos
-  - Trending
-  - Wiki
-  - Projects
-- **Repositories**
-  - Browse & Read Wiki
-  - Edit, Create & Delete files (commit)
-  - Edit, Create & Delete files (Project Columns Cards)
-  - Search Repos
-  - Browse and search Repos
-  - See your public, private and forked Repos
-  - Filter Branches and Commits
-  - Watch, star and fork Repos
-  - Download releases, files and branches
-- **Issues and Pull Requests**
-  - Search Issues/PRs
-  - Filter Issues/PRs
-  - Long click to peak Issues/PRs & add comments otg.
-  - Open/close Issues/PRs
-  - Comment on Issues/PRs
-  - Manage Issue/PR comments
-  - React to comments with reactions
-  - Edit Issues/PRs
-  - Lock/unlock conversation in Issues/PRs
-  - Assign people and add Labels and Milestones to Issues/PRs
-  - Manage Milestones
-  - Merge PRs
-  - PRs reviews (reply, react with emojies, delete & edit comment)
-  - PRs request review changes/approve & comment.
-  - PRs statuses
-- **Commits and Gists**
-  - Search Code/Gists
-  - View Gists and their files
-  - Comment on Commits/Gists
-  - Manage Commit/Gist comments
-  - Create/Delete Gists
-  - Edit Gist & Gist Files
-  - React to Commit comments with reactions
-  - Comment on line number in Files/Code changes.
-- **Organisations**
-    - Overview
-    - Feeds
-    - Teams & Teams repos
-    - Repos
-- **Users**
-  - GitHub Pinned Repos 
-  - Follow/Unfollow users
-  - View user feeds
-  - Contribution graph.
-  - Search Users, Repos, Issues,Pull Requests and Code
-- _**Much more...**_
-  - _FastHub is actively developed. More features will come!_
+**ADB-Toolkit is a BASH Script with 28 options and an METASPLOIT Section which has 6 options which is made to do easy penetration testing in Android Device.**
+You can do preety much any thing with this script and test your android device is it safe or not. This script is made with the help of ADB (Android Debug Bridge) it's an tool which is used for the developers for debugging the android device but as we know every thing has it's two side a good and a bad and i'm not telling you to do bad things but be don't do illegal things or FBI will find you 😂😂.
 
-~~> **FastHub** contain Ads, which are disabled by default. You could enable them if you'd like to support the development.~~  
-_Ads currently not available._
+Note : I'm not responsible for any thing you do to anyone with this tool this does not come under my responsibilty.
 
-## Specs / Open-source libraries:
+**METASPLOIT SECTION :- 😎**This section consists of scripts which are related to metasploit payload and you can create an payload and install it and launch it without even touching the phone and you know the power of Metasploit.
 
-- Minimum **SDK 21**, _but AppCompat is used all the way ;-)_
-- [**Kotlin**](https://github.com/JetBrains/kotlin) all new modules starting from 2.5.3 will be written in **#Kotlin**.
-- **MVP**-architecture: [**ThirtyInch**](https://github.com/grandcentrix/ThirtyInch) because its ThirtyInch.
-- [**RxJava2**](https://github.com/ReactiveX/RxJava) & [**RxAndroid**](https://github.com/ReactiveX/RxAndroid) for Retrofit & background threads
-- [**Retrofit**](https://github.com/square/retrofit) for constructing the REST API
-- [**Requery**](https://github.com/requery/requery/) for offline-mode
-- [**Stream API**](https://github.com/aNNiMON/Lightweight-Stream-API) for dealing with `Collections`
-- [**ButterKnife**](https://github.com/JakeWharton/butterknife) for view binding
-- [**Android State**](https://github.com/evernote/android-state) for saving instance states
-- [**Lombok**](https://projectlombok.org/) for getters and setters
-- [**Material-BottomNavigation**](https://github.com/sephiroth74/Material-BottomNavigation) for `BottomBar` tabs
-- [**Glide**](https://github.com/bumptech/glide) for loading images
-- [**commonmark**](https://github.com/atlassian/commonmark-java) for _Markdown_ conversion to html
-- [**Toasty**](https://github.com/GrenderG/Toasty) for displaying error/success messages
-- [**ShapedImageView**](https://github.com/gavinliu/ShapedImageView) for round avatars
-- [**Material-About-Library**](https://github.com/daniel-stoneuk/material-about-library) for the about screen
-- [**Fabric**](https://fabric.io/kits/android/crashlytics) analytics & crash reporting.
-- [**Lottie**](https://github.com/airbnb/lottie-android) for animations
-- **Android Support Libraries**, the almighty ;-)
+## Changelogs
 
-## Contribution
+### Changelog v2.32
 
-You love FastHub? You want new features or bug fixes?  
-Please **contribute** to the  project either by [_creating a PR_](https://github.com/k0shk0sh/FastHub/compare) or [_submitting an issue_](https://github.com/k0shk0sh/FastHub/issues/new) on GitHub.  
-Read the [**contribution guide**](.github/CONTRIBUTING.md) for more detailed information.
+```
+Added vesion checking code
+Really big bug fixes
+Wiki in made
+```
 
-## Language Contributors
+### Changelog V2.3
 
-<details>
-  <summary>Thanks for those who contributed to FastHub by adding their language</summary>
-      
-  <p>- Chinese (Simplified) <a href="https://github.com/devifish">@Devifish</a></p>
-  <p>- Chinese (Traditional) <a href="https://github.com/maple3142">@maple3142</a></p>
-  <p>- German <a href="https://github.com/failex234">@failex234</a></p>
-  <p>- Indonesian <a href="https://github.com/dikiaap">@dikiaap</a></p>
-  <p>- Italian <a href="https://github.com/Raffaele74">@Raffaele74</a></p>
-  <p>- Japanese <a href="https://github.com/Rintan">@Rintan</a></p>
-  <p>- Lithuanian <a href="https://github.com/mistermantas">@mistermantas</a></p>
-  <p>- Russian <a href="https://github.com/dedepete">@dedepete</a></p>
-  <p>- Turkish <a href="https://github.com/kutsan">@kutsan</a></p>
-  <p>- Portuguese <a href="https://github.com/caiorrs">@caiorrs</a></p>
-  <p>- Czech <a href="https://github.com/hejsekvojtech">@hejsekvojtech</a></p>
-  <p>- Spanish <a href="https://github.com/alete89">@alete89</a></p>
-  <p>- French <a href="https://github.com/ptt-homme">@ptt-homme</a></p>
-  <p>- Korean <a href="https://github.com/Astro36">@Astro36</a> <a href="https://github.com/cozyplanes">@cozyplanes</a></p> 
-</details>
+```
+Added multi device support, now 3
+Added support to Arch, Fedora, Centos
+Added option to restart the ADB server or not in the beginning of the script
+Added Option to clear screen when a specfic option is done executing
+Fix the Exit option (Not Working)
+Simplified the Remote connection establishment
+Fix 100's of Bugs
+Specified the directories for pulling the data
+Make the script executable from any where in shell (Fixed)
+```
 
-## FAQ
+### Changelog V2.1
 
-<details>
-  <summary>Why can't I see my <b>Organizations</b> either <i>Private</i> or <i>Public</i> ones?</summary>
-  <p>Open up https://github.com/settings/applications and look for FastHub, open it then scroll to Organization access and click on Grant Button,
-  alternatively login via <b>Access Token</b> which will ease this setup.</p>
-</details>
+```
+Added Metasploit Section
 
-<details>
-  <summary>I tried to login via Access Token & OTP but why isn't it working?</summary>
-  <p>You can't login via Access Token & OTP all together due to the lifetime of the OTP code, you'll be required to login in every few seconds.</p>
-</details>
+Added option to restart the ADB server or not in the beginning of the script
 
-<details>
-  <summary>Why are my Private Repo and Enterprise Wiki not showing up?</summary>
-  <p>It's due to FastHub scraping GitHub Wiki page & Private Repos require session token that FastHub doesn't have.</p>
-</details>
+Added 7 more options :-
+1. COPY ALL DEVICE STORAGE
+2. COPY A SPECIFIED FILE OR FOLDER
+3. PUT A FILE IN VICTIMS DEVICE
+4. LAUNCH AN APPLICATION
+5. CHECK IS PHONE ROOTED OR NOT
+6. HANG THE PHONE ( Rooted Phone )
+7. SEND SMS FROM THE PHONE
 
-<details>
-  <summary>I login with Enterprise account but can't interact with anything other than my Enterprise GitHub.</summary>
-  <p>Well, logically, you can't access anything else other than your Enterprise, but FastHub made that possible but can't do much about it, in most cases since your login credential doesn't exists in GitHub server. But in <b>few</b> cases your GitHub account Oauth token will do the trick.</p>
-</details>
+Fixed the Remote connection not establishing
+Make the script executable from any where in shell
+```
 
-<details>
-  <summary>Why am I having problems editing Issues/PRs?</summary>
-  <p>If you are unable to edit an issue in a public organization, please contact your Organization Admin to grant access to FastHub. Alternatively you can login using an Access Token with the correct permissions granted.</p>
-</details>
+## Prerequisite
 
-<details>
-  <summary>I'm having this issue! / I want this and that!</summary>
-  <p>Head to https://github.com/k0shk0sh/FastHub/issues/new and create new issue for bugs or feature requests. I really encourage you to search before opening a ticket. Any duplicate request will result in it being closed immediately.</p>
-</details>
+Before using this tool you must enable Usb-Debugging from the devloper settings from the Android setting and then you are good to go.
 
-## License
+```
+1. Go to settings
+2. Go to About device/tablet
+3. Tap Build Number 7 times
+4. Developer options will occur
+5. Go to Developer options
+6. Search for Usb Debugging & Install via USB
+7. Turn those settings on
+```
 
-> Copyright (C) 2017 Kosh.  
-> Licensed under the [GPL-3.0](https://www.gnu.org/licenses/gpl.html) license.  
-> (See the [LICENSE](https://github.com/k0shk0sh/FastHub/blob/master/LICENSE) file for the whole license text.)
+## Installation
 
-## Screenshots
+Guys i suggest please reinstall the toolkit or git pull it for every new releases
 
-| Feeds | Drawer |
-|:-:|:-:|
-| ![First](/.github/assets/first.png?raw=true) | ![Sec](/.github/assets/sec.png?raw=true) |
+```console
+foo@bar:~$ git clone https://github.com/ASHWIN990/ADB-Toolkit.git
 
-| Repo | Profile |
-|:-:|:-:|
-| ![Third](/.github/assets/third.png?raw=true) | ![Fourth](/.github/assets/fourth.png?raw=true) |
+foo@bar:~$ cd ADB-Toolkit
 
-## FastHub Logo
+foo@bar:~$ sudo chmod +x install.sh
 
-**FastHub** logo is designed by **Cookicons**.  
-[Twitter](https://twitter.com/mcookie)  
-Designer website [Cookicons](https://cookicons.co/).  
+foo@bar:~$ sudo ./install.sh -i
+```
 
-**OLD FastHub** logo was designed by **Kevin Aguilar**.  
-[Twitter](https://twitter.com/kevttob)  
-Designer at [Kevin Aguilar](http://kevaguilar.com/).  
-Laus Deo Semper
+## Usage
+
+```console
+foo@bar:~$ sudo ./ADB-Toolkit.sh
+
+"or you can do"
+
+foo@bar:~$ sudo bash ADB-Toolkit.sh
+```
+
+## ADB-Toolkit Screenshot
+
+<p align="center">
+    <img align="center" src="https://raw.githubusercontent.com/ASHWIN990/ADB-Toolkit/master/screenshots/git1.jpeg"><br>
+</p>
+
+## Metasploit Section Screenshot
+
+<p align="center">
+    <img align="center" src="https://raw.githubusercontent.com/ASHWIN990/ADB-Toolkit/master/screenshots/git2.jpeg"><br><br>
+    <img align="center" src="https://raw.githubusercontent.com/ASHWIN990/ADB-Toolkit/master/screenshots/git3.jpeg"><br><br>
+    <img align="center" src="https://raw.githubusercontent.com/ASHWIN990/ADB-Toolkit/master/screenshots/git4.jpeg"><br><br>
+</p>
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Support Me
+
+<a href="https://www.buymeacoffee.com/ashwinisahu" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+## Author
+
+- **ASHWINI SAHU** - _WHOLE WORK_ - (https://github.com/ASHWIN990)
