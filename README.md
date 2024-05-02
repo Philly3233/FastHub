@@ -1,4 +1,4 @@
-git clone https://github.com/git clone https://github.com/#### FastHub is currently under a huge refactoring, please make sure to submit an issue only if necessary. 
+ https://github.com/git clone FastHub is currently under a huge refactoring, please make sure to submit an issue only if necessary. 
 ##### You could follow the development on V5 in this [PR](https://github.com/k0shk0sh/FastHub/pull/2599)
 
 [![Build Status](https://app.bitrise.io/app/abd1afbd2a03e0e4/status.svg?token=txykViMUFzx1WkvjixD01A&branch=development)](https://app.bitrise.io/app/abd1afbd2a03e0e4)
